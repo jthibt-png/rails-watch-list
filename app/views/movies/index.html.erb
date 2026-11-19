@@ -4,13 +4,18 @@
 
 <h1>Movies</h1>
 
-<div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
-</div>
+<div class="container">
 
 <%= link_to "New movie", new_movie_path %>
+
+ <div class="movie-grid">
+    <% @movies.each do |movie| %>
+      <div class="movie-card">
+        <%= image_tag movie.poster_url %>
+        <h2><%= movie.title %></h2>
+        <p>⭐ <%= movie.rating %>/10</p>
+        <%= link_to "See movie", movie_path(movie) %>
+      </div>
+    <% end %>
+  </div>
+</div>
