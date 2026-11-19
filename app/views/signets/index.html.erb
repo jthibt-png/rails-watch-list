@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Signets" %>
+
+<h1>Signets</h1>
+
+<div id="signets">
+  <% @signets.each do |signet| %>
+    <%= render signet %>
+    <p>
+      <%= link_to "Show this signet", signet %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New signet", new_signet_path %>

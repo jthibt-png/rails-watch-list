@@ -1,0 +1,2 @@
+class Signet < ApplicationRecord
+end

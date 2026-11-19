@@ -1,0 +1,12 @@
+<% content_for :title, "Editing signet" %>
+
+<h1>Editing signet</h1>
+
+<%= render "form", signet: @signet %>
+
+<br>
+
+<div>
+  <%= link_to "Show this signet", @signet %> |
+  <%= link_to "Back to signets", signets_path %>
+</div>

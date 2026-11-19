@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @signet %>
+
+<div>
+  <%= link_to "Edit this signet", edit_signet_path(@signet) %> |
+  <%= link_to "Back to signets", signets_path %>
+
+  <%= button_to "Destroy this signet", @signet, method: :delete %>
+</div>
